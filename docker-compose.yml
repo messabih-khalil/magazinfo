@@ -10,12 +10,13 @@ services:
       - 8000:8000
     depends_on:
       - db
+    env_file: ./core/.env
   db:
     image: postgres:13
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
       - "POSTGRES_HOST_AUTH_METHOD=trust"
-
+    env_file: ./core/.env
 volumes:
-  postgres_data: 
+  postgres_data:
