@@ -1,3 +1,6 @@
 .venv
 .git
 .gitignore
+.vscode
+*/migrations
+*/__pycache__
